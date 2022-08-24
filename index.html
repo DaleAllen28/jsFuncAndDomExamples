@@ -6,26 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Console Debugging In VS Code</title>
     <script src="script.js" defer></script>
+    <link href="style.css" rel="stylesheet"></link>
 </head>
 <body>
     <h1 class="title">Javascript & DOM Methods and Functions Practice</h1>
     <button onclick="toggleClass" id="toggleClass">toggleClass</button>
     <br><br>
 
-    <div>
-        <form class="calc">
-            <input type="number" class="Input "id="num1Input" name="num1Input">
-            <select id="arithOpSelector" name="arithOpSelector">
-                <option value="+">+</option>
-                <option value="-">-</option>
-                <option value="*">*</option>
-                <option value="/">/</option>
-                <option value="%">% of</option>
-            </select>
-            <input type="number" class="Input" id="num2Input" name="num2Input">
-            <input type="submit" value="=" id="calcSubmit"></input>
-        </form>
-        <p id="calcResult"></p>
-    </div>
+    <main>
+        <div class="functionDiv" id="calcDiv">
+            <h2>Calculator</h2>
+            <form id="calcForm">
+                <input type="number" class="Input "id="num1Input" name="num1Input">
+                <select id="arithOpSelector" name="arithOpSelector">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">% of</option>
+                </select>
+                <input type="number" class="Input" id="num2Input" name="num2Input">
+                <input type="submit" value="=" id="calcSubmit"></input>
+            </form>
+            <p id="calcResult"></p>
+        </div>
+
+        <div class="functionDiv">
+            <h2>Manipulating Form Inputs</h2>
+            <p>Enter your name:</p><form id="stringForm"><input type="text" id="reverseInput"></form> 
+            <span id="reverseOutput"></span>
+        </div>
+    </main>
+
 </body>
 </html>

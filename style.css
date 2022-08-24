@@ -1,0 +1,58 @@
+:root {
+    box-sizing: border-box;
+
+    /* HEX Color Pallette */
+    --tea-green: #ccf5acff;
+    --celadon: #bad29fff;
+    --roman-silver: #808a9fff;
+    --y-in-mn-blue: #2c497fff;
+    --russian-violet: #3d2b56ff;
+
+    /*HSL Color Pallette For Easy Transparency Modification*/
+    --tea-green-hsl: hsla(94, 78%, 82%, 1);
+    --celadon-hsl: hsla(88, 36%, 72%, 1);
+    --roman-silver-hsl: hsla(221, 14%, 56%, 0.6);
+    --y-in-mn-blue-hsl: hsla(219, 49%, 34%, 0.2);
+    --russian-violet-hsl: hsla(265, 33%, 25%, 1);
+
+    background: var(--tea-green-hsl);
+}
+
+body {
+    padding:2%;
+    height: 100vh;
+}
+
+.functionDiv {
+    border:1px dotted var(--roman-silver);
+    background: var(--y-in-mn-blue-hsl);
+    margin:0% 0%;
+    border-radius: 1vw;
+
+}
+
+.functionDiv * {
+    display: inline-block; /*NEEDS SORTING TO ALLOW FUNCTION ITEMS IN DIV TO STRETCH AND SHRINK*/
+}
+
+.input {
+    background: red;
+}
+
+#reverseInput {
+    border:none;
+    background: var(--celadon);
+    border-radius: 10em;
+    max-width:max-content;
+}
+
+main {
+    display:flex;
+    flex-direction: column;
+    align-content: space-between;
+    gap:5%;
+    background: var(--roman-silver-hsl);
+    padding:5%;
+    border-radius: 1vw;
+    height: 100%;
+}

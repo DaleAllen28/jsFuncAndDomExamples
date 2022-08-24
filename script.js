@@ -5,7 +5,9 @@
     const arithOpSelector = document.querySelector("#arithOpSelector");
     const calcSubmit = document.querySelector("#calcSubmit");
     const calcResult = document.querySelector("#calcResult");//Element selector for result
-    const calcForm = document.querySelector(".calc");
+    const calcForm = document.querySelector("#calcForm");
+
+    const reverseInput = document.querySelector("#reverseInput");
 
 
 
@@ -96,11 +98,15 @@
 
     console.log(sumFun(100, 20, "%"));
 
-    //CALCULATOR FUNCTION USING INPUTS
+    //CALCULATOR FUNCTION USING INPUTS TO OUTPUT RESULT TO DOM
 
     calcForm.addEventListener('submit', e => {
         e.preventDefault();
+        if(num1Input.value === "" || num2Input.value === ""){
+            alert("A value must be entered in both boxes to calculate answer");
+        } else {
         calcResult.innerHTML = sumFun(parseInt(num1Input.value),parseInt(num2Input.value),arithOpSelector.value);
+        }
     });
 
     /*JSFunctions*/
@@ -133,6 +139,19 @@
 
             //reversing random players name
             console.log(reverseString(randomIndexMethod(players), "",""));
+
+            /*!!! CURRENTLY NOT WORKING, REVIEW NEXT!!!*/
+
+            reverseInput.onkeyup = function() {
+                const reverseOutput = document.querySelector("#reverseOutput");
+                reverseOutput.innerHTML = reverseString(reverseInput.value, "","");
+            }
+
+            /*
+            reverseInput.addEventListener("input", function{
+                const reverseOutput = document.querySelector("#reverseOutput");
+                reverseOutput.innerHTML = reverseString(reverseInput.value, "","");
+            })*/
         
         /*Check Element has a Class*/
 
